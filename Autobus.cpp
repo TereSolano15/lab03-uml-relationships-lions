@@ -16,3 +16,7 @@ const string &Autobus::getTipoPermiso() const {
 void Autobus::setTipoPermiso(const string &tipoPermiso) {
     Autobus::tipoPermiso = tipoPermiso;
 }
+
+Autobus::~Autobus() {
+
+}

@@ -10,6 +10,7 @@ private:
 	string tipoPermiso;
 
 public:
+    virtual ~Autobus();
 
     Autobus(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible);
 
