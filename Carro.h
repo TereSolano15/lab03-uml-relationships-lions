@@ -3,6 +3,7 @@
 //
 #ifndef LAB03_UML_RELATIONSHIP_LIONS_CARRO_H
 #define LAB03_UML_RELATIONSHIP_LIONS_CARRO_H
+#include <sstream>
 
 class Carro {
     private:
@@ -20,6 +21,7 @@ public:
     void setNumeroPasajeros(int numeroPasajeros);
     const string &getTipoCombustible() const;
     void setTipoCombustible(const string &tipoCombustible);
+    string toString();
     virtual ~Carro();
 };
 

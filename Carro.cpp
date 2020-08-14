@@ -5,11 +5,7 @@
 #include "Carro.h"
 
 Carro::Carro(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible) : cilindrada(cilindrada),
-                                                                                               modelo(modelo),
-                                                                                               numeroPasajeros(
-                                                                                                       numeroPasajeros),
-                                                                                               tipoCombustible(
-                                                                                                       tipoCombustible) {}
+modelo(modelo), numeroPasajeros(numeroPasajeros),tipoCombustible(tipoCombustible) {}
 
 Carro::~Carro() {
 
@@ -45,4 +41,12 @@ const string &Carro::getTipoCombustible() const {
 
 void Carro::setTipoCombustible(const string &tipoCombustible) {
     Carro::tipoCombustible = tipoCombustible;
+}
+string Carro::toString() {
+    stringstream s;
+    s<<"Modelo: "<<getModelo()<<endl;
+    s<<"Numero de pasajeros: "<<getNumeroPasajeros()<<endl;
+    s<<"Cilindrada: "<<getCilindrada()<<endl;
+    s<<"Tipo de combustible: "<<getTipoCombustible()<<endl;
+    return s.str();
 }

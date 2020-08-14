@@ -4,9 +4,8 @@
 
 #include "Chofer.h"
 
-Chofer::Chofer(const string &name, const string &id) : name(name), id(id) {}
 
-Chofer::Chofer(const string &name, const string &id, Auto *audi) : name(name), id(id), audi(audi) {}
+Chofer::Chofer(const string &name, const string &id, Carro *carro) : name(name), id(id), carro(carro) {}
 
 Chofer::~Chofer() {
 
@@ -28,12 +27,17 @@ void Chofer::setId(const string &id) {
     Chofer::id = id;
 }
 
-
-
-Auto *Chofer::getAudi() const {
-    return audi;
+Carro *Chofer::getCarro() const {
+    return carro;
 }
 
-void Chofer::setAudi(Auto *audi) {
-    Chofer::audi = audi;
+void Chofer::setCarro(Carro *carro) {
+    Chofer::carro = carro;
+}
+string Chofer::toString() {
+    stringstream s;
+    s<<"Nombre: "<<getName()<<endl;
+    s<<"ID: "<<getId()<<endl;
+    s<<"Carro: "<<getCarro()<<endl;
+    return s.str();
 }
