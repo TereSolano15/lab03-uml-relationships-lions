@@ -10,7 +10,17 @@ class Motor {
 
 private:
 
-    int
+    int modelo;
+
+public:
+
+    Motor(int modelo);
+
+    virtual ~Motor();
+
+    int getModelo() const;
+
+    void setModelo(int modelo);
 
 };
 
