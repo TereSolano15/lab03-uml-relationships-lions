@@ -4,16 +4,33 @@
 
 #include "Motor.h"
 
-int Motor::getModelo() const {
-    return modelo;
+
+Motor::Motor() {}
+
+Motor::Motor(int model, int velocidadNominal) : model(model), velocidad_Nominal(velocidadNominal) {}
+
+int Motor::getModel() const {
+    return model;
 }
 
-void Motor::setModelo(int modelo) {
-    Motor::modelo = modelo;
+void Motor::setModel(int model) {
+    Motor::model = model;
 }
 
-Motor::Motor(int modelo) : modelo(modelo) {}
+int Motor::getVelocidadNominal() const {
+    return velocidad_Nominal;
+}
 
-Motor::~Motor() {
+void Motor::setVelocidadNominal(int velocidadNominal) {
+    velocidad_Nominal = velocidadNominal;
+}
 
+string Motor::toString() {
+
+    stringstream s;
+
+    s<<"\t modelo del motor: " <<model<<endl;
+    s<<"\t Revoluciones del motor: "<<velocidad_Nominal;
+
+    return s.str();
 }

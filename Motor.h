@@ -4,23 +4,34 @@
 
 #ifndef BASIC_00_EXAMPLE_MOTOR_H
 #define BASIC_00_EXAMPLE_MOTOR_H
+#include <iostream>
+#include <sstream>
+using namespace std;
 
 
 class Motor {
 
 private:
 
-    int modelo;
+    int model;
+    int velocidad_Nominal;
 
 public:
 
-    Motor(int modelo);
+    Motor();
 
-    virtual ~Motor();
+    Motor(int model, int velocidadNominal);
 
-    int getModelo() const;
+    int getModel() const;
 
-    void setModelo(int modelo);
+    void setModel(int model);
+
+    int getVelocidadNominal() const;
+
+    void setVelocidadNominal(int velocidadNominal);
+
+    string toString();
+
 
 };
 
