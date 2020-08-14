@@ -4,7 +4,9 @@
 #ifndef LAB03_UML_RELATIONSHIP_LIONS_CARRO_H
 #define LAB03_UML_RELATIONSHIP_LIONS_CARRO_H
 #include <sstream>
+#include <iostream>
 
+using namespace std;
 class Carro {
     private:
         int cilindrada;
