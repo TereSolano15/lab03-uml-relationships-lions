@@ -1,19 +1,21 @@
 #pragma once
 #include<iostream>
 #include<sstream>
-#include"Auto.h"
+#include"Carro.h"
 using namespace std;
 
-class Autobus : public Auto
+class Autobus : public Carro
 {
 private:
 	string tipoPermiso;
 
 public:
-	Autobus(int cilindrada, int modelo, int numeroPasajeros, string tipoPermiso) : Auto(cilindrada, modelo, numeroPasajeros, "diesel");
-	void mostrarPermisos();
-	string toString();
-  string getTipoPermiso() const;
-  void setTipoPermiso(string tipoPermiso);
 
+    Autobus(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible);
+
+    Autobus(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible, const string &tipoPermiso);
+
+    const string &getTipoPermiso() const;
+
+    void setTipoPermiso(const string &tipoPermiso);
 };
