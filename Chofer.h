@@ -3,23 +3,24 @@
 //
 #ifndef LAB03_UML_RELATIONSHIPS_LIONS_CHOFER_H
 #define LAB03_UML_RELATIONSHIPS_LIONS_CHOFER_H
-
-#include "Auto.h"
+#include <iostream>
+#include <sstream>
+#include "Carro.h"
+using namespace std;
 
 class Chofer {
 private:
     string name;
     string id;
-    Auto* audi;
+    Carro* carro;
 public:
-    Chofer(const string &name, const string &id);
-    Chofer(const string &name, const string &id, Auto *audi);
+    Chofer(const string &name, const string &id, Carro *carro);
     const string &getName() const;
     void setName(const string &name);
     const string &getId() const;
-    Auto *getAudi() const;
-    void setAudi(Auto *audi);
     void setId(const string &id);
+    Carro *getCarro() const;
+    void setCarro(Carro *carro);
     virtual ~Chofer();
     string toString();
 };
