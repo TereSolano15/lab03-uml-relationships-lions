@@ -4,8 +4,8 @@
 
 #include "Carro.h"
 
-Carro::Carro(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible) : cilindrada(cilindrada),
-modelo(modelo), numeroPasajeros(numeroPasajeros),tipoCombustible(tipoCombustible) {}
+Carro::Carro(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible)
+: cilindrada(cilindrada),modelo(modelo), numeroPasajeros(numeroPasajeros),tipoCombustible(tipoCombustible) {}
 
 Carro::~Carro() {
 
@@ -50,4 +50,12 @@ string Carro::toString() {
     s<<"Cilindrada: "<<getCilindrada()<<endl;
     s<<"Tipo de combustible: "<<getTipoCombustible()<<endl;
     return s.str();
+}
+
+Chofer *Carro::getChofer() const {
+    return chofer;
+}
+
+void Carro::setChofer(Chofer *chofer) {
+    Carro::chofer = chofer;
 }

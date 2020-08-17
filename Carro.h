@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include "Motor.h"
+#include "Chofer.h"
 
 using namespace std;
 class Carro {
@@ -15,6 +16,7 @@ class Carro {
         int numeroPasajeros;
         string tipoCombustible;
         Motor* motor;
+        Chofer* chofer;
 public:
     Carro(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible);
     int getCilindrada() const;
@@ -27,6 +29,8 @@ public:
     void setTipoCombustible(const string &tipoCombustible);
     string toString();
     virtual ~Carro();
+    Chofer *getChofer() const;
+    void setChofer(Chofer *chofer);
 };
 
 

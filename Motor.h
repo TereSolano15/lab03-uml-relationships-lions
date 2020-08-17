@@ -12,7 +12,6 @@ using namespace std;
 class Motor {
 
 private:
-
     int model;
     int velocidad_Nominal;
 
