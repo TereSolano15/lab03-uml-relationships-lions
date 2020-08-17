@@ -6,6 +6,7 @@
 #include <iostream>
 #include <sstream>
 #include "Carro.h"
+#include "Chofer.h"
 using namespace std;
 
 class Chofer {
