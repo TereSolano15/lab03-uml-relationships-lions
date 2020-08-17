@@ -27,17 +27,9 @@ void Chofer::setId(const string &id) {
     Chofer::id = id;
 }
 
-//Carro *Chofer::getCarro() const {
-  //  return audi;
-//}
-
-//void Chofer::setCarro(Carro *audi) {
-  //  Chofer::audi = audi;
-//}
 string Chofer::toString() {
     stringstream s;
     s<<"Nombre: "<<getName()<<endl;
     s<<"ID: "<<getId()<<endl;
-    //s<<"Carro: "<<getCarro()<<endl;
     return s.str();
 }

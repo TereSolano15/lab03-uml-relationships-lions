@@ -18,8 +18,6 @@ public:
     void setName(const string &name);
     const string &getId() const;
     void setId(const string &id);
-    //Carro *getCarro() const;
-    //void setCarro(Carro*);
     virtual ~Chofer();
     string toString();
 };
