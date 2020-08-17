@@ -5,6 +5,7 @@
 #define LAB03_UML_RELATIONSHIP_LIONS_CARRO_H
 #include <sstream>
 #include <iostream>
+#include "Motor.h"
 
 using namespace std;
 class Carro {
@@ -13,6 +14,7 @@ class Carro {
         int modelo;
         int numeroPasajeros;
         string tipoCombustible;
+        Motor* motor;
 public:
     Carro(int cilindrada, int modelo, int numeroPasajeros, const string &tipoCombustible);
     int getCilindrada() const;

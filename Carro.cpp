@@ -44,6 +44,7 @@ void Carro::setTipoCombustible(const string &tipoCombustible) {
 }
 string Carro::toString() {
     stringstream s;
+    s<<motor->toString()<<endl;
     s<<"Modelo: "<<getModelo()<<endl;
     s<<"Numero de pasajeros: "<<getNumeroPasajeros()<<endl;
     s<<"Cilindrada: "<<getCilindrada()<<endl;
