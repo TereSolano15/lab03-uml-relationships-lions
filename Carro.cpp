@@ -9,6 +9,9 @@ Carro::Carro(int cilindrada, int modelo, int numeroPasajeros, const string &tipo
 
 Carro::~Carro() {
 
+    delete motor;
+    delete chofer;
+
 }
 
 int Carro::getCilindrada() const {
